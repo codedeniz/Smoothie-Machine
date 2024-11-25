@@ -1,0 +1,266 @@
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+    background-size: 300% 300%;
+    animation: gradientShift 10s ease infinite;
+    color: #333;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(240, 98, 146, 0.9);
+    color: white;
+    border-bottom: 5px solid #ff80ab;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1s ease-out;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .header p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  .container {
+    max-width: 700px;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(0.95);
+    animation: zoomIn 0.6s ease forwards;
+  }
+  
+  .smoothie-form label {
+    font-weight: bold;
+    display: block;
+    margin: 15px 0 5px;
+    font-size: 1.1rem;
+  }
+  
+  .smoothie-form input,
+  .smoothie-form select,
+  .smoothie-form button {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  
+  .smoothie-form input:focus,
+  .smoothie-form select:focus {
+    box-shadow: 0 4px 10px rgba(240, 98, 146, 0.4);
+    transform: scale(1.02);
+    outline: none;
+  }
+  
+  .smoothie-form .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .smoothie-form .checkbox-group label {
+    background: #f06292;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: normal;
+    cursor: pointer;
+    transition: background 0.3s;
+    
+  }
+  
+  .smoothie-form .checkbox-group input[type='checkbox'] {
+    display: none;
+  }
+  
+  .smoothie-form .checkbox-group input[type='checkbox']:checked + label {
+    background: #e91e63;
+  }
+  
+  .order-btn {
+    background: linear-gradient(135deg, #4caf50, #81c784);
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .order-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
+  }
+  
+  .output {
+    margin-top: 25px;
+    background: rgba(227, 242, 253, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    display: none;
+    animation: fadeIn 0.8s ease-in-out forwards;
+    transform-origin: top center;
+    transform: scale(0.9);
+  }
+  
+  .output h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #0288d1;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(135deg, #388e3c, #66bb6a);
+    color: white;
+    font-size: 0.9rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.95);
+      opacity: 0.9;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+.order-btn:active {
+    transform: translateY(1px) scale(0.98);
+    background: linear-gradient(135deg, #388e3c, #66bb6a);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .smoothie-form .checkbox-group input[type='checkbox']:checked + label {
+    background: #e91e63;
+    box-shadow: 0 0 10px rgba(233, 30, 99, 0.8);
+    transform: scale(1.1);
+  }
+  
+  .clicked {
+    animation: popEffect 0.3s ease-out forwards;
+  }
+  
+  @keyframes popEffect {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.15);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+.smoothie-form .checkbox-group input[type='checkbox']:checked + label {
+  background: #e91e63;
+  box-shadow: 0 0 15px rgba(233, 30, 99, 0.6);
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.clicked-label {
+  animation: popEffect 0.3s ease-out forwards;
+}
+
+@keyframes popEffect {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(233, 30, 99, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.smoothie-form .checkbox-group input[type='checkbox']:checked + label {
+    background: #e91e63;
+    box-shadow: 0 0 15px rgba(233, 30, 99, 0.6);
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+  }
+  
+  .smoothie-form .checkbox-group label:active {
+    transform: translateY(1px) scale(0.98);
+    background: linear-gradient(135deg, #d81b60, #f06292);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .clicked-label {
+    animation: popEffect 0.3s ease-out forwards;
+  }
+  
+  @keyframes popEffect {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+      transform: scale(1.2);
+      box-shadow: 0 0 15px rgba(233, 30, 99, 0.6);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+  }
+  
